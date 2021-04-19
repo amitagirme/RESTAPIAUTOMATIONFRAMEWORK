@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9518" started-at="2021-04-19T02:56:03Z" finished-at="2021-04-19T02:56:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9518" started-at="2021-04-19T02:56:03Z" finished-at="2021-04-19T02:56:13Z">
+      <class name="api.testngfiles.APIRunnerfile">
+        <test-method status="PASS" signature="RegisterEmailApiFunctionalTest()[pri:0, instance:api.testngfiles.APIRunnerfile@63d4e2ba]" name="RegisterEmailApiFunctionalTest" duration-ms="3866" started-at="2021-04-19T08:26:03Z" description="1. Functional Automation testing for Register Successful API" finished-at="2021-04-19T08:26:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterEmailApiFunctionalTest -->
+        <test-method status="PASS" signature="RegisterLoginApiFunctionalTest()[pri:0, instance:api.testngfiles.APIRunnerfile@63d4e2ba]" name="RegisterLoginApiFunctionalTest" duration-ms="1371" started-at="2021-04-19T08:26:07Z" description="2. Functional Automation testing for Register Login Successful API" depends-on-methods="api.testngfiles.APIRunnerfile.RegisterEmailApiFunctionalTest" finished-at="2021-04-19T08:26:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterLoginApiFunctionalTest -->
+        <test-method status="PASS" signature="CreateUserApiFunctionalTest()[pri:0, instance:api.testngfiles.APIRunnerfile@63d4e2ba]" name="CreateUserApiFunctionalTest" duration-ms="1651" started-at="2021-04-19T08:26:08Z" description="3. Functional Automation testing for Create User Successfully API" depends-on-methods="api.testngfiles.APIRunnerfile.RegisterLoginApiFunctionalTest" finished-at="2021-04-19T08:26:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUserApiFunctionalTest -->
+        <test-method status="PASS" signature="GetUserListApiFunctionalTest()[pri:0, instance:api.testngfiles.APIRunnerfile@63d4e2ba]" name="GetUserListApiFunctionalTest" duration-ms="1062" started-at="2021-04-19T08:26:10Z" description="4. Functional Automation testing for Get List of Users Successfully API" depends-on-methods="api.testngfiles.APIRunnerfile.CreateUserApiFunctionalTest" finished-at="2021-04-19T08:26:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetUserListApiFunctionalTest -->
+        <test-method status="PASS" signature="deleteUserApiFunctionalTest()[pri:0, instance:api.testngfiles.APIRunnerfile@63d4e2ba]" name="deleteUserApiFunctionalTest" duration-ms="1557" started-at="2021-04-19T08:26:11Z" description="5. Functional Automation testing for Delete User API" depends-on-methods="api.testngfiles.APIRunnerfile.CreateUserApiFunctionalTest" finished-at="2021-04-19T08:26:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserApiFunctionalTest -->
+      </class> <!-- api.testngfiles.APIRunnerfile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
