@@ -1,0 +1,43 @@
+Manual Test cases for login endpoint:
+
+TestCase1: LOGIN SUCCESSFULL
+Given : Request as /api/login
+Mehod: POST
+When : Payload is {
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
+Then:
+1. Validate the request is sent with POST method.
+2. Validate the Response code, it should be 200 OK.
+3. Validate the Response message, the token should be generated and should be in String format.
+{
+    "token": "QpwL5tke4Pnpja7X4"
+}
+4. Validate the content type of the response it should be application/json; charset=utf-8.
+5. Validate the header Server name to check if response is coming from the expected server, the value should be "cloudflare".
+6. Validate the request with incorrect method GET, response generated should not be token.
+7. Validate the response when password entered is incorrect, it should not generate the token and provide feedback on incorrect password and response code should be 400. 
+8. Validate the response when email id entered is incorrect, it should not generate the token and provide feedback response message : "error": "user not found" and response code should be 400.
+9. Validate the response when payload is sent empty, it should provide feedback response with message-"error": "Missing email or username" and response code should be 400.
+10. Validate the response when payload doesnot have email field, it should provide feedback response with message-"error": "Missing email or username" and response code should be 400.
+11. Validate the response when payload doesnot have password field, it should provide feedback response with message-"error": "Missing password" and response code should be 400.
+
+
+TestCase2: LOGIN UNSUCCESSFULL
+Given : Request as /api/login 
+Mehod: POST
+When : Payload is {
+    "email": "peter@klaven"
+}
+Then:
+1. Validate the request is sent with POST method.
+2. Validate the Response code, it should be 400 OK.
+3. Validate the Response message, the token should be generated as :{
+    "error": "Missing password"
+}.
+4. Validate the content type of the response it should be application/json; charset=utf-8.
+5. Validate the header Server name to check if response is coming from the expected server, the value should be "cloudflare".
+6. Validate the request with incorrect method GET, response should not be generated.
+7. Validate the response when email id entered is incorrect, it should not generate the token and provide feedback on incorrect credentials and response code should be 400.
+8. Validate the response when payload is sent empty, it should provide feedback response with message-"error": "Missing email or username" and response code should be 400.
